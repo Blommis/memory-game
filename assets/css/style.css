@@ -9,14 +9,60 @@
 /*Global styles*/
 
 body{
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    background-color: rgb(0, 204, 255);
     text-align: center;
     font-family: var(--primary-font);
 }
 
 h1, h2, h3{
     font-family: var(--secondary-font);
+}
+.mr-memory-header{
+    display: block;
+    font-size: 40px;
+}
+#intro{
+   display: flex;
+    flex-direction: column;
+} 
+#playerName, .intro-button {
+    width: 200px;  
+    padding: 10px; 
+    margin: 10px auto; 
+    display: block; 
+    border-radius: 10px; 
+    font-size: 1rem; 
+    border: none;
+    text-align: center;
+    
+}
+.intro-button{
+    background-color: #3498db;
+    color: white;
+    font-family: var(--secondary-font);
+    
+}
+.intro-button:hover {
+    background-color: #064a78;
+}
+
+@media screen and (min-width:768px) {
+    
+    body{
+        padding-top: 100px;
+    }
+    .mr-memory-header{
+        font-size: 60px;
+    }
+    #intro h1{
+        font-size: 40px;
+    }
+    #intro p {
+        font-size: 1.5rem;
+    }
+    #playerName, .intro-button{
+        width: 300px;
+        font-size: 1.5rem;
+    }
+    
 }
