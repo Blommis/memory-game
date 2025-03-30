@@ -12,11 +12,13 @@ body{
     background-color: rgb(0, 204, 255);
     text-align: center;
     font-family: var(--primary-font);
+    padding-top: 70px;
 }
 
 h1, h2, h3{
     font-family: var(--secondary-font);
 }
+/*Introduction section */
 .mr-memory-header{
     display: block;
     font-size: 40px;
@@ -45,7 +47,36 @@ h1, h2, h3{
 .intro-button:hover {
     background-color: #064a78;
 }
+/*Introduction section ends*/
 
+/*Game section*/
+
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(4,63px);
+    justify-content: center;
+    padding-top: 30px;
+    gap: 5px;
+}
+/*Styling for the cards*/
+.card{
+    background-color: #064a78;
+    width: 63px;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3 ease-in-out;
+
+}
+.card:hover{
+    background-color: #3498db;
+}
+
+/*Media query for larger desktops */
 @media screen and (min-width:768px) {
     
     body{
@@ -64,5 +95,27 @@ h1, h2, h3{
         width: 300px;
         font-size: 1.5rem;
     }
+    /*Game section*/
+
+    .game-container{
+        display: grid;
+        grid-template-columns: repeat(4,100px);
+        justify-content: center;
+        padding-top: 30px;
+        gap: 5px;
+    }
+    /*Styling for the cards*/
+    .card{
+        background-color: #064a78;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3 ease-in-out;
     
+    }
 }
