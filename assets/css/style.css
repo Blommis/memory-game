@@ -64,6 +64,9 @@ h1, h2, h3{
     text-align: center;
     
 }
+/*.hidden {
+    display: none;
+}*/
 .intro-button{
     background-color: #3498db;
     color: white;

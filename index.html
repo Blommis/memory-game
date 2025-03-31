@@ -18,11 +18,13 @@
             <p>"Write your username to start playing!"</p>
         </div>
         <input type="text" id ="playerName"  placeholder="Your username">
-        <button class="intro-button">Lets play!</button>
+        <button class="intro-button" onclick="startGame()">Lets play!</button>
     </section>
 
     <!--the memory game-->
     <section id="game" class="hidden">
+        <!--When the user write in username they gets a greeting message after pressing lets play -->
+        <h2 id="greeting"></h2>
         <div class ="game-container" id = "game-board">
             <!-- first 6 cards here-->
             <div class ="card">
