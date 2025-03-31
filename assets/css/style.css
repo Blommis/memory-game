@@ -21,7 +21,7 @@ h1, h2, h3{
 /*Introduction section */
 
 .mr-memory-header{
-    display: block;
+    display: block; /*To get word "MR. Memory on the own row*/
     font-size: 40px;
 }
 #intro{
@@ -86,7 +86,7 @@ h1, h2, h3{
 }
 /*Styling for the cards*/
 .card{
-    background-color: white;
+    background-color: #064a78;
     width: 63px;
     height: 63px;
     display: flex;
@@ -100,6 +100,16 @@ h1, h2, h3{
 }
 .card:hover{
     background-color: #3498db;
+}
+/*Hidden section for flipped cards*/
+.flipped {
+    background-color: white;
+}
+.card i {
+    display: none;
+}
+.flipped i {
+    display: block;
 }
 
 /*Media query for larger desktops */
