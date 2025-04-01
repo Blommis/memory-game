@@ -115,6 +115,47 @@ h1, h2, h3{
     display: block;
 }
 
+/*Score style*/
+.Score {
+    margin: 20px auto;
+    width: fit-content;
+    background-color: #064a78; 
+    border: 2px solid #3498db; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    padding: 10px;
+    font-family: var(--primary-font); 
+    text-align: left;
+    
+}
+
+.Score ul {
+    display: flex;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.Score li {
+    padding: 3px 7px;
+    margin: 5px 0;
+    background-color: #eaf6fc; 
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.correct-points {
+    color: #27ae60; /* Green color for correct answer */
+}
+
+.wrong-points {
+    color: #e74c3c; /* Red color for wrong answer */
+}
+
+
+
 /*Media query for larger desktops */
 @media screen and (min-width:400px) {
     
