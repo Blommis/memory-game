@@ -76,7 +76,14 @@ function updateScores (){
     wrongPointsElement.textContent = `Wrong: ${wrongPoints}`;
 }
 // Reset the game 
-function resetGame(){}
+document.querySelector(".reset-button").addEventListener("click", resetGame);
+function resetGame(){
+    matchedPairs =0;
+    correctPoints = 0;
+    wrongPoints = 0;
+    updateScores(); //reset score
+    createGameBoard(); //Recreate the game
+}
 
 
     // if the pairs are mathced. empty the list (selectedCards) and increase the count of matched pairs.
@@ -89,7 +96,7 @@ function checkMatch() {
         
         // check if everbody matches
         if (matchedPairs === icons.length / 2) {
-            alert(`Well done! You got ${correctPoints} points!`);
+            alert("Congrats! You won!");
         }
     } else {
         selectedCards.forEach(card => {
@@ -100,3 +107,5 @@ function checkMatch() {
         updateScores();
     }
 }
+
+
