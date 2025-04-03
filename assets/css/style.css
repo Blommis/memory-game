@@ -171,7 +171,16 @@ h1, h2, h3{
      text-decoration: underline;
 }
 
+/*Feedback messages meanwhile playing*/
+.feedback-message{
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    color: #27ae60;
+    background-color: #064a78;
+    padding: 10px 20px;
+    text-align: center;
 
+}
 
 /*Media query for larger desktops */
 @media screen and (min-width:400px) {
