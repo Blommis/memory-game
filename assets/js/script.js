@@ -63,6 +63,13 @@ function flipCard() {
         setTimeout(checkMatch, 500);
     }
 }
+// Function to update scores on page 
+function updateScores (){
+}
+// Reset the game 
+function resetGame(){}
+
+
     // if the pairs are mathced. empty the list (selectedCards) and increase the count of matched pairs.
 function checkMatch() {
     if (selectedCards[0].dataset.icon === selectedCards[1].dataset.icon) {
