@@ -64,7 +64,16 @@ function flipCard() {
     }
 }
 // Function to update scores on page 
+let correctPoints = 0;
+let wrongPoints = 0;
+// Score display
+const correctPointsElement = document.querySelector(".correct-points");
+const wrongPointsElement = document.querySelector(".wrong-points");
+
+// function to update scores on the page
 function updateScores (){
+    correctPointsElement.textContent = `Correct: ${correctPoints}`;
+    wrongPointsElement.textContent = `Wrong: ${wrongPoints}`;
 }
 // Reset the game 
 function resetGame(){}
@@ -75,15 +84,19 @@ function checkMatch() {
     if (selectedCards[0].dataset.icon === selectedCards[1].dataset.icon) {
         selectedCards = [];
         matchedPairs++;
-
+        correctPoints++; //increase correct points
+        updateScores();
+        
         // check if everbody matches
         if (matchedPairs === icons.length / 2) {
-            alert("Congrats! You won!");
+            alert(`Well done! You got ${correctPoints} points!`);
         }
     } else {
         selectedCards.forEach(card => {
             card.classList.remove("flipped");
         });
         selectedCards = [];
+        wrongPoints++; //increase wrong points
+        updateScores();
     }
 }
