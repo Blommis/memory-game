@@ -24,6 +24,7 @@ h1, h2, h3{
     display: block; /*To get word "MR. Memory on the own row*/
     font-size: 40px;
 }
+
 #intro{
    display: flex;
     flex-direction: column;
@@ -180,6 +181,15 @@ h1, h2, h3{
     padding: 10px 20px;
     text-align: center;
 
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /*Media query for larger desktops */

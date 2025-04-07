@@ -84,7 +84,8 @@ function resetGame(){
     updateScores(); //reset score
     createGameBoard(); //Recreate the game
 }
-
+function showFeedbackMessage(){
+}
 
     // if the pairs are mathced. empty the list (selectedCards) and increase the count of matched pairs.
 function checkMatch() {
