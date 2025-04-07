@@ -94,10 +94,10 @@ function showFeedbackMessage(message){
 
     // Append the feedback element in the index.html 
     document.body.appendChild(feedbackElement);
-    // Remove the message after 1.5s 
+    // Remove the message after values seconds 
     setTimeout(() => {
         feedbackElement.remove();
-    }, 1500);
+    }, 3000); //value forvisibility
 }
 
     // if the pairs are mathced. empty the list (selectedCards) and increase the count of matched pairs.
