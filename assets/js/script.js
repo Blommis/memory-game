@@ -85,6 +85,16 @@ function resetGame(){
     createGameBoard(); //Recreate the game
 }
 function showFeedbackMessage(){
+    const feedbackElement = document.createElement("div");
+    feedbackElement.classList.add("feedback-message");
+    feedbackElement.textContent = message;
+
+    // Append the feedback element in the index.html 
+    document.body.appendChild(feedbackElement);
+    // Remove the message after 1.5s 
+    setTimeout(() => {
+        feedbackElement.remove();
+    }, 1500);
 }
 
     // if the pairs are mathced. empty the list (selectedCards) and increase the count of matched pairs.
