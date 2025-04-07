@@ -84,6 +84,9 @@ function resetGame(){
     updateScores(); //reset score
     createGameBoard(); //Recreate the game
 }
+// Array of feedback messages 
+const feedbackMessages = ["Nice!", "Wow!", "Amazing!", "Keep it up!", "You're on fire!"]
+
 function showFeedbackMessage(message){
     const feedbackElement = document.createElement("div");
     feedbackElement.classList.add("feedback-message");
