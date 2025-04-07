@@ -84,7 +84,7 @@ function resetGame(){
     updateScores(); //reset score
     createGameBoard(); //Recreate the game
 }
-function showFeedbackMessage(){
+function showFeedbackMessage(message){
     const feedbackElement = document.createElement("div");
     feedbackElement.classList.add("feedback-message");
     feedbackElement.textContent = message;
@@ -105,6 +105,10 @@ function checkMatch() {
         correctPoints++; //increase correct points
         updateScores();
         
+        // Show a feedback message from the array
+        const feedbackMessage = feedbackMessages[(matchedPairs - 1) % feedbackMessages.length];
+        showFeedbackMessage(feedbackMessage);
+
         // check if everbody matches
         if (matchedPairs === icons.length / 2) {
             alert("Congrats! You won!");
