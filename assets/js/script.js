@@ -6,6 +6,9 @@ let name = document.getElementById("playerName").value;
         return;
     } 
 
+    // Clear the placeholder in greeting due to empty h2 in HTML. (avoid error in HTML validator)
+    document.getElementById("greeting").innerHTML = "";
+
     // To remove intro section and add greeting instead
     let introSection = document.getElementById("intro");
     introSection.innerHTML = `<h2 id="greeting">Good luck, ${name}!</h2>`;
